@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Calculator</h2>
+
+<input type="number" id="n1" placeholder="Enter number">
+
+<select id="op">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+
+<input type="number" id="n2" placeholder="Enter number">
+
+<button onclick="calc()">Calculate</button>
+
+<p id="res"></p>
+
+<script>
+  function calc() {
+    let a = Number(n1.value);
+    let b = Number(n2.value);
+    let o = op.value;
+    let r;
+
+    if (o == "+") r = a + b;
+    if (o == "-") r = a - b;
+    if (o == "*") r = a * b;
+    if (o == "/") r = a / b;
+
+    res.innerText = "Result: " + r;
+  }
+</script>
+
+</body>
+</html>
